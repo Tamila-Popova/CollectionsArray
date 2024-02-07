@@ -1,9 +1,15 @@
 package practice.reverseArray;
-
+import java.util.Arrays;
+import java.util.Scanner;
 public class ReverseArray {
-
+//public String[] strings = {};
     public static String[] reverse(String[] strings) {
-        //TODO: Напишите код, который меняет порядок расположения элементов внутри массива на обратный.
+String[] line = strings;
+        for (int i = 0; i < strings.length/2; i++) {
+            String a = strings[i];
+            strings[i] =  strings[strings.length-1 - i];
+            strings[strings.length-1-i] = a;
+        }
         return strings;
     }
 
